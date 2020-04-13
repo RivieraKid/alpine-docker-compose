@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk \
+RUN apk add \
     gcc \
     libffi-dev \
     py-pip \
