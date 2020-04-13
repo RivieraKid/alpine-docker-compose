@@ -1,5 +1,7 @@
 FROM alpine:latest
 
+USER root
+
 WORKDIR /
 
 RUN apk add \
@@ -22,7 +24,5 @@ VOLUME ["/data"]
 ADD entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
-
-USER root
 
 ENTRYPOINT ["/entrypoint.sh"]
