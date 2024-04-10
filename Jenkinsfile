@@ -4,9 +4,9 @@ pipeline {
     stage('abc') {
       agent any
       steps {
-        sh '''agent "any"
-
-sh("ls")'''
+        sh '''pwd
+        ls -al
+        docker'''
       }
     }
 
