@@ -6,6 +6,7 @@ pipeline {
         sh '''pwd
         ls -al
         uname -a
+        apt-get install -y docker
         docker'''
       }
     }
