@@ -7,7 +7,7 @@ pipeline {
         sh '''pwd
         ls -al
         uname -a
-        docker'''
+        docker build . -t alpine-docker-compose'''
         }
       }
     }
