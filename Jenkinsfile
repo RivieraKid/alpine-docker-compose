@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('abc') {
       agent {
-        label 'docker-build'
+        label 'docker'
       }
       steps {
         sh '''pwd
