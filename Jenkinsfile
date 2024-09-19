@@ -4,7 +4,6 @@ pipeline {
     }
     agent {
         kubernetes {
-            label 'docker-in-docker-maven'
             yaml """
 apiVersion: v1
 kind: Pod
@@ -30,13 +29,13 @@ spec:
     volumeMounts:
     - name: kaniko-secret
       mountPath: /kaniko/.docker
-    volumes:
-    - name: kaniko-secret
-      secret:
-        secretName: rivierakid
-        items:
-        - key: .dockerconfigjson
-          path: config.json
+  volumes:
+  - name: kaniko-secret
+    secret:
+      secretName: rivierakid
+      items:
+      - key: .dockerconfigjson
+        path: config.json
 """
         }
     }
