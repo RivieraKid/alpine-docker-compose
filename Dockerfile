@@ -11,7 +11,6 @@ RUN apk add \
     make \
     openssl-dev \
     py-pip \
-    python2-dev && \
     rm -rf /var/cache
 
 RUN pip install docker-compose
