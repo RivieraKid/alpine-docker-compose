@@ -15,13 +15,13 @@ spec:
   - name: jnlp
     image: jenkins/inbound-agent:latest
   - name: maven
-    image: maven:3.8.1-jdk8
+    image: maven
     command:
     - sleep
     args:
     - 60
   - name: kaniko
-    image: gcr.io/kanico-project/executor:debug
+    image: gcr.io/kaniko-project/executor:debug
     command:
     - sleep
     args:
