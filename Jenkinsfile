@@ -13,7 +13,7 @@ metadata:
 spec:
   containers:
   - name: jnlp
-    image: jenkins/jnlp-slave:latest
+    image: jenkins/inbound-agent:latest
   - name: maven
     image: maven:3.8.1-jdk8
     command:
