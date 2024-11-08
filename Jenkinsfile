@@ -34,7 +34,7 @@ spec:
   volumes:
   - name: kaniko-secret
     secret:
-      secretName: rivierakid
+      secretName: do-registry-push
       items:
       - key: .dockerconfigjson
         path: config.json
