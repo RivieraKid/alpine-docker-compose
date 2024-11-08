@@ -4,16 +4,8 @@ USER root
 
 WORKDIR /
 
-RUN apk add \
-    gcc \
-    libc-dev \
-    libffi-dev \
-    make \
-    openssl-dev \
-    py-pip \
+RUN apk add gcc \
     rm -rf /var/cache
-
-RUN pip install docker-compose
 
 RUN mkdir /data && \
     mkdir -p /var/run
