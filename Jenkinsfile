@@ -42,6 +42,11 @@ spec:
         }
     }
     stages {
+        stage('Clean Workspace') {
+          steps {
+            cleanWs()
+          }
+        }
         stage('Checkout') {
             steps {
                 git 'https://github.com/RivieraKid/alpine-docker-compose.git'
