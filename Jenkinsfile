@@ -30,7 +30,7 @@ spec:
     volumeMounts:
     - name: kaniko-secret
       mountPath: /kaniko/.docker
-  serviceAccount: jenkins-read-secrets
+  serviceAccount: jenkins
   automountServiceAccount: true
   volumes:
   - name: kaniko-secret
