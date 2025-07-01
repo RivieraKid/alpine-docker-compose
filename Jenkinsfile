@@ -27,18 +27,18 @@ spec:
     - sleep
     args:
     - 60
-    volumeMounts:
-    - name: kaniko-secret
-      mountPath: /kaniko/.docker
-  serviceAccount: jenkins
-  automountServiceAccount: true
-  volumes:
-  - name: kaniko-secret
-    secret:
-      secretName: do-registry-push
-      items:
-      - key: .dockerconfigjson
-        path: config.json
+    // volumeMounts:
+    // - name: kaniko-secret
+    //   mountPath: /kaniko/.docker
+  // serviceAccount: jenkins
+  // automountServiceAccount: true
+  // volumes:
+  // - name: kaniko-secret
+  //   secret:
+  //     secretName: do-registry-push
+  //     items:
+  //     - key: .dockerconfigjson
+  //       path: config.json
 """
         }
     }
